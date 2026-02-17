@@ -11,7 +11,9 @@ const app: Application = express();
 
 const PORT: number = parseInt(process.env.PORT || '3000');
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://brainquest-frontend.onrender.com'
+}));
 
 app.use(express.json());
 
